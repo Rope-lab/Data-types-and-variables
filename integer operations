@@ -1,0 +1,9 @@
+# Integer operations
+first_num = int(input())
+sec_num = int(input())
+third_num = int(input())
+forth_num = int(input())
+
+result = (first_num + sec_num) / third_num * forth_num
+
+print(result)

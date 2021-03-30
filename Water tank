@@ -1,0 +1,11 @@
+cap = 255
+liters = 0
+rows = int(input("\nHow many pours?. "))
+for i in range(0, rows):
+    water = int(input("\nLiters: "))
+    liters += water
+    # Check capacity
+    if liters > cap:
+        liters = liters - water
+        print("Insufficient capacity!")
+print("Liters in tank: ", liters)

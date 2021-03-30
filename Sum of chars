@@ -1,0 +1,8 @@
+tot_sum = 0
+# Sum of chars
+n = int(input("Number of lines: "))
+for i in range(0, n):
+    char = input("Character: ")
+    tot_sum = tot_sum + ord(char)
+
+print("The sum equals: ", tot_sum)

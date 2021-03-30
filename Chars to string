@@ -1,0 +1,6 @@
+# Chars to string
+chone = input("First charachter: ")
+ctwo = input("Second charachter: ")
+chthree = input("Third charachter: ")
+
+print(chone + ctwo + chthree)

@@ -1,0 +1,9 @@
+import math
+
+# Elevator
+n = int(input("Number of people: "))
+p = int(input("Capacity of elevator: "))
+
+course = math.ceil(n/p)
+
+print("Course: ", course)

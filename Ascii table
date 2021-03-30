@@ -1,0 +1,8 @@
+# Show the charachters with a specific index
+start_index = int(input("First index: "))
+end_index = int(input("Last index: "))
+table_ascii = ""
+for i in range(start_index, end_index + 1):
+    table_ascii += chr(i)
+
+print("\nCharachter: ", table_ascii, "\n")

@@ -1,0 +1,9 @@
+x = ord(input("First charchter: "))
+y = ord(input("Second charchter: "))
+
+# Prints out the ASCII charachter between two charachters
+def asciiCharachter(x, y):
+    for c in range(x+1, y): # x+1 to prevent the first charachter to show in the printout
+        print(chr(c))
+
+asciiCharachter(x, y)

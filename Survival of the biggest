@@ -1,0 +1,20 @@
+n = input("Numbers. ")
+c = int(input("How many numbers to remove: "))
+
+
+while " " in n:
+    n = n.replace(" ", "") # Remove blanks
+
+length = len(n)
+
+big = []
+
+for i in range(length):
+    big.append(n[i])
+
+big.sort()
+
+for i in range(0, c):
+    big.remove(big[0]) # When an item is removed at index 0 , the next item will get the index 0
+
+print(big)

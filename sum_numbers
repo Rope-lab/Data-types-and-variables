@@ -1,0 +1,20 @@
+number_one = int(input("Number: "))
+number_two = int(input("Number: "))
+number_three = int(input("Number: "))
+
+def add_and_subtract(o, t, th):
+    def sum_numbers(o, t):
+        sum = o + t
+        return sum
+    def subtract(s, th):
+        sub = s - th
+        return sub
+
+    s = sum_numbers(o, t)
+
+    su = subtract(s, th)
+
+    return su
+
+    
+print(add_and_subtract(number_one, number_two, number_three))

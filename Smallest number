@@ -1,0 +1,10 @@
+number_one = int(input("Number: "))
+number_two = int(input("Number: "))
+number_three = int(input("Number: "))
+
+def smallest_number(o, t, th):
+    l = [o, t, th]
+    l.sort()
+    return l[0]
+
+print("Smallest number: ", smallest_number(number_one, number_two, number_three))

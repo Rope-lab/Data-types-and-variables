@@ -1,0 +1,19 @@
+num = int(input("Number: "))
+
+def bar(n):
+    lbar = ""
+    dots = ""
+    procent = n / 10
+    if n % 10 == 0:
+        for i in range(0, int(procent)):
+            lbar = lbar + "%"
+        for j in range(0, 10-int(procent)):
+            dots = dots + "."
+    else:
+        lbar = "..........\nWaiting...."
+    
+    return "{}% [{}{}]\nStill loading...".format(n, lbar, dots)
+
+result = bar(num)
+
+print(result)

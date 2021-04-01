@@ -1,0 +1,15 @@
+n = input("Numbers. ").split(" ")
+c = int(input("How many numbers to remove: "))
+
+l = []
+
+for num in n:
+    l.append(int(num, base=0))
+
+l.sort()
+
+for i in range(0, c):
+    l.remove(l[0])
+
+print(l)
+

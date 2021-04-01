@@ -1,0 +1,16 @@
+number = input("Number: ")
+
+def oddEvenSum(n):
+    sumodd = 0
+    sumeven = 0
+    for digit in n:
+        if(int(digit) % 2 == 0):
+            sumeven = sumeven + int(digit)
+        if(int(digit) % 2 != 0):
+            sumodd = sumodd + int(digit)
+
+    return "Odd sum: {} Even sum: {}".format(sumeven, sumodd)
+
+result = oddEvenSum(number)
+
+print(result)

@@ -1,0 +1,38 @@
+card = input("Card: ").split(" ")
+result = ""
+teama = 11
+teamb = 11
+length = len(card)
+card.sort()
+for i in range(0, length):
+    if i > 0:
+        if card[i] == card[i-1]:
+            #print("Ignore")
+            #card.remove(card[i])
+            #length - 1
+            #print(card[i-1][0:1])
+            if card[i-1][0:1] == "A":
+                teama = teama - 1
+            else:
+                teamb = teamb - 1
+            #print(teama, teamb)
+        else:
+            #print(card[i][0:1])
+            if card[i][0:1] == "A":
+                teama = teama - 1
+            else:
+                teamb = teamb - 1
+            #print(teama, teamb)
+"""
+for char in card:
+    if char[0:1] == "B":
+        teamb = teamb - 1
+    if char[0:1] == "A":
+        teama = teama - 1
+"""
+if teama < 7 or teamb < 7:
+    result = "Team A - {}; Team B - {}\nGame was terminated".format(teama, teamb)
+else:
+    result = "Team A - {}; Team B - {}".format(teama, teamb)
+
+print(result)

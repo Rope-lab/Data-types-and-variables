@@ -9,6 +9,6 @@ for char in s:
     if char != "-" and char != " ":
         news += "-" + char + " "
    
-news = news.replace("--", " ", count)
+news = news.replace("--", "", count)
 
 print(news)

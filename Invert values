@@ -1,0 +1,14 @@
+s = input("String: ").split(" ")
+
+news = ""
+count = 0
+
+for char in s:
+    if char[0:1] == "-":
+        count += 1
+    if char != "-" and char != " ":
+        news += "-" + char + " "
+   
+news = news.replace("--", " ", count)
+
+print(news)

@@ -1,0 +1,106 @@
+######## animal.py ################
+class Animal():
+    name=""
+    def __init__(self, name):
+        self.name = name
+        #print("Animal created")
+    def __repr__(self):
+        return "Animal created"
+    def get_name(self):
+        return self.name
+
+######## mammal.py ################
+from animal import Animal
+
+class Mammal(Animal):
+    def __init__(self, name):
+        Animal.__init__(self, name)
+        self.name = name
+        print("Mammal created")
+    def get_name(self):
+        return self.name
+        #print(self.name)
+
+######## reptil.py ################
+from animal import Animal
+
+class Reptil(Animal):
+    def __init__(self, name):
+        Animal.__init__(self, name)
+        self.name = name
+        print("Reptil created")
+    def get_name(self):
+        return self.name
+        #print(self.name)
+
+######## bear.py ################
+from mammal import Mammal
+
+class Bear(Mammal):
+    def __init__(self, name):
+        Mammal.__init__(self, name)
+        self.name = name
+        print("Bear created")
+    def get_name(self):
+        #return self.name
+        print(self.name)
+
+######## gorilla.py ################
+from mammal import Mammal
+
+class Gorilla(Mammal):
+    def __init__(self, name):
+        Mammal.__init__(self, name)
+        self.name = name
+        print("Gorilla created")
+    def get_name(self):
+        return self.name
+        #print(self.name)
+
+######## lizard.py ################
+from reptil import Reptil
+
+class Lizard(Reptil):
+    def __init__(self, name):
+        Reptil.__init__(self, name)
+        print("Lizard created")
+    def get_name(self):
+        return self.name
+        #print(self.name)
+
+######## snake.py ################
+from reptil import Reptil
+
+class Snake(Reptil):
+    def __init__(self, name):
+        Reptil.__init__(self, name)
+        print("Snake created")
+    def get_name(self):
+        #return self.name
+        print(self.name)
+
+######## zoo.py ################
+from animal import Animal
+from mammal import Mammal
+from reptil import Reptil
+from lizard import Lizard
+from snake import Snake
+from gorilla import Gorilla
+from bear import Bear
+
+
+a = Animal("Dog")
+aa = a.get_name()
+print(a)
+print("Name: {}".format(aa))
+
+c = Mammal("Cat")
+cc = c.get_name()
+print(c)
+print("Name: {}".format(cc))
+
+
+l = Lizard("Godzilla")
+ll = l.get_name()
+print(l)
+print("Name: {}".format(ll))

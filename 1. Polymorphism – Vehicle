@@ -19,10 +19,10 @@ from abc import ABC, abstractmethod
 class Vehicle:
     def __init__(self):
         print("Vehicle")
-    def drive(self,distance):
-        pass
+   def drive(self,distance):
+        raise NotImplementedError("Subclass must implement method")
     def refuel(self,fuel):
-        pass
+        raise NotImplementedError("Subclass must implement method")
 class Car(Vehicle):
     def __init__(self,fuel_quantity,fuel_consumption):
         self.fuel_quantity = fuel_quantity

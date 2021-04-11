@@ -2,27 +2,27 @@ card = input("Card: ").split(" ")
 result = ""
 teama = 11
 teamb = 11
-
 length = len(card)
 dups = []
 card.sort()
+
 for i in range(0, length):
     if i > 0:
-        if card[i] == card[i-1]:
+        if card[i] == card[i-1]: # Duplicate
             if card[i-1] not in dups:
                 dups.append(card[i-1])
-        elif card[i] != card[i-1]:
+        elif card[i] != card[i-1]: # No duplicate
             if card[i-1] not in dups:
                 dups.append(card[i-1])
-        if i == length-1:
+        if i == length-1: # Catch the last in array
             if card[i] not in dups:
                 dups.append(card[i])
 
 for char in dups:
-    if char[0:1] == "B":
+    if char[0:1] == "B": # Count all "B"
         teamb = teamb - 1
-    if char[0:1] == "A":
-        teama = teama - 1
+    if char[0:1] == "A": # Count all "A"
+        teama = teama - 1 # Subtract from team A
 
 if teama < 7 or teamb < 7:
     result = "Team A - {}; Team B - {}\nGame was terminated".format(teama, teamb)
@@ -30,3 +30,5 @@ else:
     result = "Team A - {}; Team B - {}".format(teama, teamb)
 
 print(result)
+
+

@@ -1,0 +1,26 @@
+"""
+Create a class called dictionary_iter. Upon initialization it should receive a dictionary object. 
+Implement the iterator, so it returns each key-value pair of the dictionary as a tuple of two elements
+(the key and the value).
+"""
+
+class Dictionary_iter:
+    def __init__(self,dict):
+        self.value = dict
+    def __iter__(self):
+        self.n = -1
+        self.ki = []
+        return self
+    def __next__(self):
+        l = len(self.value)
+        if self.n >= l-1:
+            raise StopIteration
+        ki = list(self.value.items())
+        self.n += 1
+        return ki[self.n]
+        #return [(k, self.value[k]) for k in self.value]
+
+result = Dictionary_iter({1: "1", 2: "2"})
+
+for x in result:
+ print(x)
